@@ -1,11 +1,18 @@
 # CloudProject
 Cloud Project for file operations
+
 Project 1: Portal for file operations
+
 University Name: http://www.sjsu.edu/
+
 Course: Cloud Technologies
+
 Professor: Sanjay Garje
+
 ISA: Anushri Srinath Aithal
+
 Student Name: Snehal Yeole 
+
 LinkedIn Profile: https://www.linkedin.com/in/snehal-yeole-35889188/
 
 
