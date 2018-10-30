@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+$(function() {
+    $('#form1').submit(function(){
+    	var formData=new formData(this);
+        $.ajax({
+        url : "/upload",
+        type: 'POST',
+        cache: false,
+        contentType: false
+        
+        data:{ } , // do I need to pass data if im GET ting?
+        dataType: 'json',
+        success : function(data){
+           //doing stuff
+           //end success
+        },
+        always: function() {
+           //submit form !!!
+           $("#formtopost").submit();
+        }
+    });//end ajax   
+  });//end click
+});//end rdy
+</script>
+<form id='form1' action="/upload" method="post">
+<p>File Upload
+<input type=text name='fileupload'id='fileupload' ><input type=file name='file1' id='file1'>
+<button name='button1' id='button1'>Upload</button>
+</form>	
+</body>
+</html>

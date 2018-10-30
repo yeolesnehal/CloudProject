@@ -1,0 +1,62 @@
+ <html>
+ 
+ <Head>
+ <title>Login Page</title>
+ <link rel="stylesheet" href="index.css">
+ <script src="js/login.js"></script>
+ <script src="js/SignUp.js"></script>
+ </Head>
+ 
+ <body>
+ 
+ <div>
+<!--  <form id="form1" >-->
+
+
+  <div class="container">
+  <h1>Login</h1>
+  
+  <form name="myform" id="myform" method="post">
+    <label for="emailid"><b>EmailId</b></label>
+    <input type="text" placeholder="Enter EmailId" name="emailid" id="emailid" required>
+    
+    <br>
+
+	<br>
+	
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+	<br>
+	
+	<br> 
+
+	
+    	<button type="submit" onclick="return validate()">Login</button>
+
+  </form> 		
+    <br>
+    
+   
+    <button type="button" class="cancelbtn">Cancel</button>
+    
+    
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+	
+
+	
+  <!--  <div class="container" style="background-color:#f1f1f1">-->
+  <p align="center">New User?<a href="#" onclick="return SignUpPage()">SignUp Here</a></p>
+  
+  
+  </div>
+<!--  </form>-->
+<!--  </div>-->
+
+
+</body>
+
+</html>

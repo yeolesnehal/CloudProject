@@ -1,0 +1,54 @@
+<!-- Upload file form -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Upload File Page</title>
+</head>
+
+<body>
+
+<!-- <form id="upload-file-form">
+  <label for="upload-file-input">Upload your file:</label>
+  <input id="upload-file-input" type="file" name="uploadfile" accept="*" />
+  <button name='button1' id='button1'>Upload</button>
+</form>-->
+
+
+<script>
+$(document).ready(function() {
+  $("#upload-file-input").click("change", upload);
+});
+
+/**
+ * Upload the file sending it via Ajax at the Spring Boot server.
+ */
+function upload() {
+  $.ajax({
+    url: "/controller/upload",
+    type: "POST",
+    data: new FormData($("#upload-file-form")[0]),
+    enctype: 'multipart/form-data',
+    processData: false,
+    contentType: false,
+    cache: false,
+    success: function () {
+      // Handle upload success
+      // ...
+    },
+    error: function () {
+      // Handle upload error
+      // ...
+    }
+  });
+} // function uploadFile
+</script>
+<form id='upload-file-form'>
+<p>File Upload
+<input type=text name='fileupload'id='fileupload' ><input type=file name='file1' id='file1'>
+<button name='button1' id='button1'>Upload</button>
+</form>	
+
+</body>
+
+</html>

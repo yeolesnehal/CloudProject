@@ -1,0 +1,10 @@
+edu/sjsu/cloud/springbootstarter/controller/FileService.class
+edu/sjsu/cloud/springbootstarter/controller/FileController.class
+edu/sjsu/cloud/springbootstarter/controller/UserController.class
+edu/sjsu/cloud/springbootstarter/controller/UserFilesRepository.class
+edu/sjsu/cloud/springbootstarter/controller/UserFiles.class
+edu/sjsu/cloud/springbootstarter/controller/UserService.class
+edu/sjsu/cloud/springbootstarter/controller/UserRepository.class
+edu/sjsu/cloud/springbootstarter/controller/MvcConfig.class
+edu/sjsu/cloud/springbootstarter/CloudApplication.class
+edu/sjsu/cloud/springbootstarter/controller/User.class

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/logout.js"></script>
+
+<script>
+$(function() {
+    $('#fileupload').submit(function(){
+    	var formData=new formData(this);
+        $.ajax({
+        url : "http://localhost::8080/upload",
+        type: 'POST',
+        cache: false,
+        contentType: false
+        
+        data:{ } , // do I need to pass data if im GET ting?
+        dataType: 'json',
+        success : function(data){
+           //doing stuff
+           //end success
+        },
+        always: function() {
+           //submit form !!!
+           $("#formtopost").submit();
+        }
+    });//end ajax   
+  });//end click
+});//end rdy
+</script>
+
+</head>
+
+<body>
+
+
+
+<form name="form2" id="form2" method="post">
+<p align="right">
+
+	<button type="button" name="logout" id="logout" onclick="return backtologinpage()">Logout</button>
+  
+</p>
+</form>
+
+<br>
+<br>
+
+<form id='upload-file-form' action="/upload" method="post" enctype="multipart/form-data">
+<p>File Upload
+<input type=text name='fileupload'id='fileupload' ><input type=file name='file' id='file'>
+<button name='button1' id='button1'>Upload</button>
+</form>	
+
+<br>
+<br>
+
+<!--  <form name="listfiles" id="listfiles" action="/listfiles" method="post"> 
+<button name='listfile' id='listfile'>List Files</button>
+</form>-->
+
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+			<div class="table-responsive">
+				<table class="table table-striped" style="width:95%">
+<tr>
+            
+                <th>File Name</th>
+                <th>Description</th>
+                <th>File Created Time</th>
+                <!--  <th>File Updated Time</th>-->
+                <th>Download</th>
+                <th>Delete</th>
+              <!--    <th>Edit</th>-->
+               
+ </tr>
+ 
+ 		
+</table>
+</div>
+
+
+</body>
+
+</html>
